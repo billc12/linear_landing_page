@@ -1,0 +1,142 @@
+{
+    "en": {
+        "items": [
+            {
+                "label": "Buildr",
+                "url": "https://buildr.linear.finance",
+                "external": true,
+                "type": "normal"
+            },
+            {
+                "label": "Exchange",
+                "url": "https://exchange.linear.finance",
+                "external": true,
+                "type": "normal"
+            },
+            {
+                "label": "Burn",
+                "url": "https://buildr.linear.finance/burn",
+                "external": true,
+                "type": "normal"
+            },
+            {
+                "label": "Claim",
+                "url": "https://buildr.linear.finance/claim",
+                "external": true,
+                "type": "normal"
+            },
+            {
+                "label": "Transfer",
+                "url": "https://buildr.linear.finance/transfer",
+                "external": true,
+                "type": "normal"
+            },
+            {
+                "label": "Swap",
+                "url": "https://buildr.linear.finance/swap",
+                "external": true,
+                "type": "normal"
+            },
+            {
+                "label": "Blog",
+                "url": "https://linear-finance.medium.com/",
+                "external": true,
+                "type": "small"
+            },
+            {
+                "label": "Instagram",
+                "url": "https://www.instagram.com/linear",
+                "external": true,
+                "type": "small"
+            }
+        ]
+    },
+    "kr": {
+        "items": [
+            {
+                "label": "Buildr",
+                "url": "https://buildr.linear.finance",
+                "external": true
+            },
+            {
+                "label": "Exchange",
+                "url": "https://exchange.linear.finance",
+                "external": true
+            },
+            {
+                "label": "Burn",
+                "url": "https://buildr.linear.finance/burn",
+                "external": true
+            },
+            {
+                "label": "Claim",
+                "url": "https://buildr.linear.finance/claim",
+                "external": true
+            },
+            {
+                "label": "Transfer",
+                "url": "https://buildr.linear.finance/transfer",
+                "external": true
+            },
+            {
+                "label": "Swap",
+                "url": "https://buildr.linear.finance/swap",
+                "external": true
+            },
+            {
+                "label": "Blog",
+                "url": "https://linear-finance.medium.com/",
+                "external": true
+            },
+            {
+                "label": "Instagram",
+                "url": "https://www.instagram.com/linear",
+                "external": true
+            }
+        ]
+    },
+    "fr": {
+        "items": [
+            {
+                "label": "Buildr",
+                "url": "https://buildr.linear.finance",
+                "external": true
+            },
+            {
+                "label": "Exchange",
+                "url": "https://exchange.linear.finance",
+                "external": true
+            },
+            {
+                "label": "Burn",
+                "url": "https://buildr.linear.finance/burn",
+                "external": true
+            },
+            {
+                "label": "Claim",
+                "url": "https://buildr.linear.finance/claim",
+                "external": true
+            },
+            {
+                "label": "Transfer",
+                "url": "https://buildr.linear.finance/transfer",
+                "external": true
+            },
+            {
+                "label": "Swap",
+                "url": "https://buildr.linear.finance/swap",
+                "external": true
+            },
+            {
+                "label": "Blog",
+                "url": "https://linear-finance.medium.com/",
+                "external": true
+            },
+            {
+                "label": "Instagram",
+                "url": "https://www.instagram.com/linear",
+                "external": true
+            }
+        ]
+    }
+}

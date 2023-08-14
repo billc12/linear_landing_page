@@ -1,0 +1,196 @@
+@import "../variables";
+
+.sectionTabContainer {
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+
+  &-0 {
+
+    background: rgb(232, 190, 139);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -600px;
+      right: -600px;
+      z-index: 0;
+      width: 1230.1px;
+      height: 740.125px;
+      transform: rotate(-41.345deg);
+      flex-shrink: 0;
+      border-radius: 1230.1px;
+      opacity: 0.75;
+      background: #7994ff;
+      filter: blur(275px);
+    }
+  }
+  &-1 {
+    background: #b4cee7;
+  }
+  &-2 {
+    background: #b9abf8;
+  }
+  &-3 {
+    background: #ebf1ff;
+  }
+  &-4 {
+    background: rgb(88, 121, 255);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -600px;
+      right: -600px;
+      z-index: 0;
+      width: 1230.1px;
+      height: 740.125px;
+      transform: rotate(-41.345deg);
+      flex-shrink: 0;
+      border-radius: 1230.1px;
+      opacity: 0.75;
+      background: #dfb27c;
+      filter: blur(275px);
+    }
+  }
+}
+
+.sectionsTab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 113px 0 86px 0;
+  z-index: 999;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    height: 100vh;
+    min-height: 700px;
+    height: 990px;
+  }
+
+  &-tab {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    max-width: 100%;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      max-width: 616px;
+    }
+
+    &-item {
+      display: flex;
+      height: 35px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      gap: 4px;
+      flex: 1 0 0;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0px 4px 28px 0px rgba(133, 146, 178, 0.25);
+      padding: 0 1px;
+
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        padding: 0 10px;
+      }
+
+      &-svg {
+        margin-left: 2px;
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          margin-left: 4px;
+        }
+      }
+
+      &-active {
+        color: #5674fe !important;
+      }
+    }
+
+    &-item ~ &-item {
+      margin-left: 1px;
+
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 44px 0px rgba(133, 146, 178, 0.25);
+    margin-top: 44px;
+    height: 640px;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      flex-direction: row;
+    }
+
+    &-left {
+      display: flex;
+      height: 437;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 30px 64px 10px 10px;
+
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        width: 455px;
+        margin-left: 108px;
+      }
+
+      &-logo{
+        margin-bottom: 20px;
+
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          margin-bottom: 200px;
+        }
+      }
+
+      &-introduction {
+        margin: 24px 0;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      height: 640px;
+      border-radius: 20px;
+      background: linear-gradient(0deg, #0e0c24 0%, #0e0c24 100%), #ebf1ff;
+      padding: 0 10px;
+
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        max-width: 589px;
+        padding: 0 46px;
+      }
+
+      &-mask {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 182.27px;
+        height: 891.111px;
+        border-radius: 891.111px;
+        background: #253490;
+        filter: blur(125px);
+      }
+
+      &-img {
+        // width: 497px;
+        position: relative;
+        z-index: 999;
+      }
+    }
+  }
+}

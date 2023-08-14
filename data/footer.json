@@ -1,0 +1,428 @@
+{
+  "en": {
+    "telegramDialog": {
+      "global": "Global",
+      "southKorea": "South Korea",
+      "vietnam": "Vietnam",
+      "turkey": "Turkey",
+      "russia": "Russia",
+      "joinNow": "Join now"
+    },
+    "newsletter": {
+      "title": "Sign up for our newsletter",
+      "subtitle": "Make sure to receive our latest updates and announcements",
+      "placeholder": "My email address",
+      "label": "Email address",
+      "buttonLabel": "Sign Up"
+    },
+    "cookieConsent": {
+      "title": "Linear uses cookies",
+      "text": "We use cookies to improve our site",
+      "buttons": {
+        "allow": "Allow",
+        "deny": "Deny"
+      }
+    },
+    "items": [
+      {
+        "label": "Learn more",
+        "items": [
+          {
+            "label": "Partners",
+            "url": "/partners/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "Strategic investors",
+            "url": "/partners/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "Research",
+            "url": "/research/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "White paper",
+            "url": "https://linear.finance/defi/Linear_Whitepaper_EN.pdf",
+            "external": true,
+            "newWindow": true
+          }
+        ]
+      },
+      {
+        "label": "Connect with Linear",
+        "items": [
+          {
+            "label": "Github",
+            "url": "https://github.com/Linear-finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Twitter",
+            "url": "https://twitter.com/linearfinance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Discord",
+            "url": "https://discord.gg/nvCk356bky",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Telegram announcements",
+            "url": "https://t.me/linearfinanceannoucements",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Telegram discussion groups",
+            "url": "open-telegram-dialog",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/company/linearfinance/",
+            "external": true,
+            "newWindow": true
+          }
+        ]
+      },
+      {
+        "label": "Our apps",
+        "items": [
+          {
+            "label": "Linear Buildr",
+            "url": "https://buildr.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Linear Swap",
+            "url": "https://buildr.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Linear Exchange",
+            "url": "https://exchange.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Linear Vault",
+            "url": "https://vault.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Linear DAO",
+            "url": "/dao/",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      },
+      {
+        "label": "Legal",
+        "items": [
+          {
+            "label": "Privacy policy",
+            "url": "/privacy-policy/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "Cookie settings",
+            "url": "change-cookie-settings",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      }
+    ],
+    "copyright": "Linear Finance. All rights reserved."
+  },
+  "fr": {
+    "telegramDialog": {
+      "global": "Global",
+      "southKorea": "South Korea",
+      "vietnam": "Vietnam",
+      "turkey": "Turkey",
+      "russia": "Russia",
+      "joinNow": "Join now"
+    },
+    "newsletter": {
+      "title": "Inscrivez-vous à notre newsletter",
+      "subtitle": "Recevez nos dernières annonces et mises à jour",
+      "placeholder": "Mon adresse email",
+      "label": "Adresse email",
+      "buttonLabel": "s'inscrire"
+    },
+    "cookieConsent": {
+      "title": "Linear utilise des cookies",
+      "text": "Nous utilisons des cookies pour améliorer notre site",
+      "buttons": {
+        "allow": "Autoriser",
+        "deny": "Nier"
+      }
+    },
+    "items": [
+      {
+        "label": "EN SAVOIR PLUS",
+        "items": [
+          {
+            "label": "Partenaires",
+            "url": "/fr/partners/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "Investisseurs stratégiques",
+            "url": "/fr/partners/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "Recherche",
+            "url": "/fr/research/",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      },
+      {
+        "label": "RESTEZ CONNECTEZ À LINEAR",
+        "items": [
+          {
+            "label": "Github",
+            "url": "https://github.com/Linear-finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Twitter",
+            "url": "https://twitter.com/linearfinance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Discord",
+            "url": "https://discord.gg/nvCk356bky",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Telegram (Annonces)",
+            "url": "https://t.me/linearfinanceannoucements",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Telegram (Groupes de discussion)",
+            "url": "open-telegram-dialog",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/company/linearfinance/",
+            "external": true,
+            "newWindow": true
+          }
+        ]
+      },
+      {
+        "label": "NOS APPS",
+        "items": [
+          {
+            "label": "Linear Buildr",
+            "url": "https://buildr.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Linear Swap",
+            "url": "https://buildr.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Linear Exchange",
+            "url": "https://exchange.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "Linear DAO",
+            "url": "/fr/dao/",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      },
+      {
+        "label": "INFORMATIONS LÉGALES",
+        "items": [
+          {
+            "label": "Politique de confidentialité",
+            "url": "/fr/privacy-policy/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "Paramètres des cookies",
+            "url": "change-cookie-settings",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      }
+    ],
+    "copyright": "Linear Finance. All rights reserved."
+  },
+  "kr": {
+    "telegramDialog": {
+      "global": "Global",
+      "southKorea": "South Korea",
+      "vietnam": "Vietnam",
+      "turkey": "Turkey",
+      "russia": "Russia",
+      "joinNow": "Join now"
+    },
+    "newsletter": {
+      "title": "뉴스레터를 구독해보세요",
+      "subtitle": "리니어의 최신 업데이트와 공지사항을 만나보세요",
+      "placeholder": "내 이메일 주소",
+      "label": "내 이메일 주소",
+      "buttonLabel": "구독하기"
+    },
+    "cookieConsent": {
+      "title": "선형은 쿠키를 사용합니다.",
+      "text": "우리는 사이트를 개선하기 위해 쿠키를 사용합니다",
+      "buttons": {
+        "allow": "허용하다",
+        "deny": "부정하다"
+      }
+    },
+    "items": [
+      {
+        "label": "더 알아보기",
+        "items": [
+          {
+            "label": "파트너",
+            "url": "/kr/partners/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "전략적 투자자",
+            "url": "/kr/partners/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "리서치",
+            "url": "/kr/research/",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      },
+      {
+        "label": "리니어와 연결되기",
+        "items": [
+          {
+            "label": "깃헙",
+            "url": "https://github.com/Linear-finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "트위터",
+            "url": "https://twitter.com/linearfinance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "디스코드",
+            "url": "https://discord.gg/nvCk356bky",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "텔레그램 공지채널",
+            "url": "https://t.me/linearfinanceannoucements",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "텔레그램 채널",
+            "url": "open-telegram-dialog",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "링크드인",
+            "url": "https://www.linkedin.com/company/linearfinance/",
+            "external": true,
+            "newWindow": true
+          }
+        ]
+      },
+      {
+        "label": "리니어 애플리케이션",
+        "items": [
+          {
+            "label": "리니어 빌더",
+            "url": "https://buildr.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "리니어 스왑",
+            "url": "https://buildr.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "리니어 거래소",
+            "url": "https://exchange.linear.finance",
+            "external": true,
+            "newWindow": true
+          },
+          {
+            "label": "리니어 다오",
+            "url": "/kr/dao/",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      },
+      {
+        "label": "법률 사항",
+        "items": [
+          {
+            "label": "프라이버시 정책",
+            "url": "/kr/privacy-policy/",
+            "external": false,
+            "newWindow": false
+          },
+          {
+            "label": "쿠키 설정",
+            "url": "change-cookie-settings",
+            "external": false,
+            "newWindow": false
+          }
+        ]
+      }
+    ],
+    "copyright": "Linear Finance. All rights reserved."
+  }
+}

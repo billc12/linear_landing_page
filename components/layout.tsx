@@ -1,23 +1,34 @@
-import Alert from './alert'
-import Footer from './footer'
-import Meta from './meta'
+import React, { useEffect } from 'react';
+import Alert from './alert';
+import Footer from './Footer';
+import Header from './Header';
+import Meta from './meta';
+
+export const CookieContext = React.createContext({});
 
 type Props = {
-  preview?: boolean
-  children: React.ReactNode
-}
+    preview?: boolean;
+    children: React.ReactNode;
+};
 
 const Layout = ({ preview, children }: Props) => {
-  return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <Alert preview={preview} />
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
-  )
-}
+    const handleResetCookieConsent = () => {};
 
-export default Layout
+    return (
+        <CookieContext.Provider
+            value={{
+                handleResetCookieConsent
+            }}
+        >
+            {/* <Meta /> */}
+            <Header />
+            <div className="min-h-screen">
+                {/* <Alert preview={preview} /> */}
+                <main>{children}</main>
+            </div>
+            <Footer />
+        </CookieContext.Provider>
+    );
+};
+
+export default Layout;

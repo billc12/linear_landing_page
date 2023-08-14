@@ -1,56 +1,37 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Post from '../interfaces/post'
+import Layout from '../components/layout';
+import { getAllArea } from '../lib/api';
+import delArrayEmpty from '../utils/tools';
+import HomePage from '../components/HomePage';
 
-type Props = {
-  allPosts: Post[]
+export default function Index({
+    banner,
+    sections,
+    sectionsExtra1,
+    sectionsExtra2,
+    sectionsTab,
+    partners
+}) {
+    return (
+        <Layout>
+            <HomePage
+                banner={banner}
+                sections={sections}
+                sectionsExtra1={sectionsExtra1}
+                sectionsExtra2={sectionsExtra2}
+                sectionsTab={sectionsTab}
+                partners={partners}
+            ></HomePage>
+        </Layout>
+    );
 }
 
-export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
-  return (
-    <>
-      <Layout>
-        <Head>
-          <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
-    </>
-  )
-}
+export async function getStaticProps({ params }) {
+    const posts = getAllArea(['home'], params);
+    const { home } = delArrayEmpty(posts)[0];
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
-
-  return {
-    props: { allPosts },
-  }
+    return {
+        props: {
+            ...home
+        }
+    };
 }
