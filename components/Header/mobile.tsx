@@ -103,7 +103,7 @@ const MobileHeader = ({}) => {
                         />
 
                         <ul className="mobileModalContainer-content-list list-unstyled ">
-                            {menu?.map(item => (
+                            {menu?.map((item, index) => (
                                 <li
                                     className={clsx(
                                         'mobileModalContainer-content-list-item',
@@ -111,7 +111,7 @@ const MobileHeader = ({}) => {
                                             ? 'listItemNormal'
                                             : 'listItemSmall'
                                     )}
-                                    key={item?.url}
+                                    key={item?.url + index}
                                 >
                                     {item?.type === 'normal' ? (
                                         <Link

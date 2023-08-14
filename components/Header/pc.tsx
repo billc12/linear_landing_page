@@ -100,7 +100,7 @@ const PcHeader = ({}) => {
                         <LogoGroup className="modalContainer-content-logo" />
 
                         <ul className="modalContainer-content-list list-unstyled ">
-                            {menu?.map(item => (
+                            {menu?.map((item, index) => (
                                 <li
                                     className={clsx(
                                         'modalContainer-content-list-item',
@@ -108,7 +108,7 @@ const PcHeader = ({}) => {
                                             ? 'listItemExternal'
                                             : 'listItem'
                                     )}
-                                    key={item?.url}
+                                    key={item?.url + index}
                                 >
                                     {item?.type === 'normal' ? (
                                         <Link

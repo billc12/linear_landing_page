@@ -14,7 +14,7 @@ import LogoGroup from '../LogoGroup';
 import CloseIcon from '../../images/icons/close.svg';
 import ChevronDown from '../../images/icons/chevron-down.svg';
 
-const MobileTabSection = ({sectionsTab}) => {
+const MobileTabSection = ({ sectionsTab }) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [languageIsOpen, setLanguageIsOpen] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
@@ -103,7 +103,7 @@ const MobileTabSection = ({sectionsTab}) => {
                         />
 
                         <ul className="mobileModalContainer-content-list list-unstyled ">
-                            {menu?.map(item => (
+                            {menu?.map((item, index) => (
                                 <li
                                     className={clsx(
                                         'mobileModalContainer-content-list-item',
@@ -111,7 +111,7 @@ const MobileTabSection = ({sectionsTab}) => {
                                             ? 'listItemNormal'
                                             : 'listItemSmall'
                                     )}
-                                    key={item?.url}
+                                    key={item?.url + index}
                                 >
                                     {item?.type === 'normal' ? (
                                         <Link

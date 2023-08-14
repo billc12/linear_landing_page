@@ -48,7 +48,7 @@ const PcTabSection = ({ sectionsTab }) => {
                         return (
                             <>
                                 <span
-                                    key={item.tab}
+                                    key={item.tab + index}
                                     onClick={setTabState.bind(this, index)}
                                     className={clsx(
                                         'sectionsTab-tab-item',
@@ -71,11 +71,11 @@ const PcTabSection = ({ sectionsTab }) => {
                 </div>
 
                 {sectionsTab?.items.map(
-                    ({ logo, img, tittle, introduction, buttons }, index) => {
+                    ({ tittle, introduction, buttons }, index) => {
                         if (index === tabState) {
                             return (
                                 <div
-                                    key={tittle}
+                                    key={tittle + index}
                                     className="sectionsTab-content"
                                 >
                                     <div className="sectionsTab-content-left">
@@ -93,40 +93,52 @@ const PcTabSection = ({ sectionsTab }) => {
                                             </span>
                                         </div>
                                         <div className="sectionsTab-content-left-buttons">
-                                            {(buttons ?? []).map(button => {
-                                                return (
-                                                    <Link
-                                                        key={button?.to}
-                                                        href={button?.to}
-                                                        title={button?.title}
-                                                        className={clsx(
-                                                            'btn',
-                                                            'btn-type2'
-                                                        )}
-                                                        target={
-                                                            button?.newWindow
-                                                                ? '_blank'
-                                                                : null
-                                                        }
-                                                        rel={
-                                                            button?.newWindow
-                                                                ? 'noreferrer'
-                                                                : null
-                                                        }
-                                                    >
-                                                        <span className="btn-label">
-                                                            {button?.label}
-                                                            <RrrowRight className="ml-3 inline" />
-                                                        </span>
-                                                    </Link>
-                                                );
-                                            })}
+                                            {(buttons ?? []).map(
+                                                (button, index) => {
+                                                    return (
+                                                        <Link
+                                                            key={
+                                                                button?.to +
+                                                                index
+                                                            }
+                                                            href={button?.to}
+                                                            title={
+                                                                button?.title
+                                                            }
+                                                            className={clsx(
+                                                                'btn',
+                                                                'btn-type2'
+                                                            )}
+                                                            target={
+                                                                button?.newWindow
+                                                                    ? '_blank'
+                                                                    : null
+                                                            }
+                                                            rel={
+                                                                button?.newWindow
+                                                                    ? 'noreferrer'
+                                                                    : null
+                                                            }
+                                                        >
+                                                            <span className="btn-label">
+                                                                {button?.label}
+                                                                <RrrowRight className="ml-3 inline" />
+                                                            </span>
+                                                        </Link>
+                                                    );
+                                                }
+                                            )}
                                         </div>
                                     </div>
                                     <div className="sectionsTab-content-right">
                                         <div className="sectionsTab-content-right-mask"></div>
                                         <div className="sectionsTab-content-right-img">
-                                            <Image alt='' src={require(`../../images/home/product${index + 1}.png`)} />
+                                            <Image
+                                                alt=""
+                                                src={require(`../../images/home/product${
+                                                    index + 1
+                                                }.png`)}
+                                            />
                                         </div>
                                     </div>
                                 </div>

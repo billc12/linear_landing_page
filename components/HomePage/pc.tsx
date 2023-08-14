@@ -95,7 +95,7 @@ const PcHomePage = ({
             />
             {(sections ?? []).map((section, idx) => (
                 <section
-                    key={section?.title}
+                    key={section?.title + idx}
                     id={`section-${idx + 1}`}
                     className="secondary-banner py-64"
                 >
@@ -122,7 +122,7 @@ const PcHomePage = ({
                                                         marginTop: '44px'
                                                     }}
                                                     className="flex  items-center"
-                                                    key={index}
+                                                    key={item?.describe + index}
                                                 >
                                                     <div
                                                         style={{
@@ -232,7 +232,7 @@ const PcHomePage = ({
             {sectionsExtra1.map((item, index) => {
                 return (
                     <div
-                        key={index}
+                        key={item.tittle1 + index}
                         className="relative"
                         style={{
                             height: '812px'
@@ -259,34 +259,36 @@ const PcHomePage = ({
                                         {item.tittle1}
                                     </div>
                                     <div className="mt-9 ml-10">
-                                        {(item?.buttons ?? []).map(button => {
-                                            return (
-                                                <Link
-                                                    key={button?.to}
-                                                    href={button?.to}
-                                                    title={button?.title}
-                                                    className={clsx(
-                                                        'btn',
-                                                        'btn-type2'
-                                                    )}
-                                                    target={
-                                                        button?.newWindow
-                                                            ? '_blank'
-                                                            : null
-                                                    }
-                                                    rel={
-                                                        button?.newWindow
-                                                            ? 'noreferrer'
-                                                            : null
-                                                    }
-                                                >
-                                                    <span className="btn-label">
-                                                        {button?.label}
-                                                        <RrrowRight className="ml-3 inline" />
-                                                    </span>
-                                                </Link>
-                                            );
-                                        })}
+                                        {(item?.buttons ?? []).map(
+                                            (button, index) => {
+                                                return (
+                                                    <Link
+                                                        key={button?.to + index}
+                                                        href={button?.to}
+                                                        title={button?.title}
+                                                        className={clsx(
+                                                            'btn',
+                                                            'btn-type2'
+                                                        )}
+                                                        target={
+                                                            button?.newWindow
+                                                                ? '_blank'
+                                                                : null
+                                                        }
+                                                        rel={
+                                                            button?.newWindow
+                                                                ? 'noreferrer'
+                                                                : null
+                                                        }
+                                                    >
+                                                        <span className="btn-label">
+                                                            {button?.label}
+                                                            <RrrowRight className="ml-3 inline" />
+                                                        </span>
+                                                    </Link>
+                                                );
+                                            }
+                                        )}
                                     </div>
                                 </div>
 
@@ -332,7 +334,7 @@ const PcHomePage = ({
                     {(sectionsExtra2?.buttons ?? []).map((button, index) => {
                         return (
                             <Link
-                                key={button?.to}
+                                key={button?.to + index}
                                 href={button?.to}
                                 title={button?.title}
                                 className={clsx('btn', 'btn-type2')}
@@ -351,7 +353,7 @@ const PcHomePage = ({
                     {(sectionsExtra2?.items ?? []).map((item, index) => {
                         return (
                             <div
-                                key={index}
+                                key={item.headTittle + index}
                                 data-aos="zoom-in-up"
                                 data-aos-anchor-placement="bottom-bottom"
                                 data-aos-easing="ease-in-out"
@@ -380,6 +382,7 @@ const PcHomePage = ({
                                     {(item?.bgs ?? []).map((bg, index) => {
                                         return (
                                             <Image
+                                                key={index}
                                                 src={require(`../../images/visuals/car-bg-${
                                                     index + 1
                                                 }.png`)}

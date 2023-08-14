@@ -6,112 +6,185 @@ seo:
   description: Linear Finance
 home:
   banner:
-    heading: Le premier protocole décentralisé d’actifs « delta-one » compatible
-      cross-chain.
-    scrollDownLabel: Faites défiler la page pour en savoir plus
+    heading: Unlock the future of Decentralised Finance
+    scrollDownLabel: Scroll down to learn more
     underline:
-      text: Échangez des actifs liquides rapidement, de manière transparente et
-        rentable grâce à la composabilité cross-chain.
-      linkText: actifs liquides
-      popperText: Un actif liquide fait référence aux actifs qui ont la même valeur
-        qu'un autre actif. Linear dispose de nombreux actifs liquides que nous
-        appelons ℓiquids, ils simulent un actif sous-jacent - cryptomonnaies,
-        matières premières, indices et produits structurés numériques.
+      text: Trade synthetic assets quickly, seamlessly and cost-effectively
+      linkText: liquid assets
+      popperText: A liquid asset refers to assets that have the same value as another asset. Linear has numerous liquids which we call ℓiquids, they simulate an underlying asset — spot crypto, commodities, indices, and digital structured products.
+    buttons:
+      - label: Get started with Linear
+        title: Get started with Linear
+        color: primary
+        to: https://buildr.linear.finance
+        external: true
+        newWindow: true
+  sectionsExtra1:
+    - tittle1: Transforming Traditional Finance
+      tittle2: with Blockchain Technology
+      icon: ./img/visuals/home-section-logo4.png
+      buttons:
+        - label: Get started with Linear
+          title: Get started with Linear
+          color: primary
+          to: https://buildr.linear.finance
+          external: true
+          newWindow: true
+  sectionsExtra2:
+    tittle: Build ℓUSD and start trading today!
+    buttons:
+      - label: Launch Builder
+        title: Launch Builder
+        color: primary
+        to: https://buildr.linear.finance
+        external: true
+        newWindow: true
+    items:
+      - headTittle: '5'
+        tittle: Security Audits
+        introduction: Audited three times by Slowmist and twice by Certik with high security scores each time
+        bgs:
+          - image: ./img/visuals/car-bg-1.png
+      - headTittle: '24'
+        tittle: Exchange Listings
+        introduction: Binance, Bithumb, Kucoin, Coinex, Huobi, Upbit, Uniswap, PancakeSwap and many more…
+        bgs:
+          - image: ./img/visuals/car-bg-1.png
+          - image: ./img/visuals/car-bg-2.png
+      - headTittle: 180k+
+        tittle: Community Members
+        introduction: Across Discord, Twitter and Telegram in many different languages
+        bgs:
+          - image: ./img/visuals/car-bg-2.png
+  sectionsTab:
+    tittle: Discover The Linear Ecosystem
+    items:
+      - tab: Builder
+        logo: ./img/home/tabTittle1.png
+        tittle: Stake. Build. Earn.
+        introduction: A decentralized application for staking and building ℓUSD, accepting a mixture of LINA tokens and other major cryptocurrencies.
+        img: ./img/home/product1.png
+        buttons:
+          - label: Learn more
+            title: Learn more
+            color: primary
+            to: https://buildr.linear.finance
+            external: true
+            newWindow: true
+      - tab: Exchange
+        logo: ./img/home/tabTittle2.png
+        tittle: Spend. Invest. Diversify.
+        introduction: Linear Exchange enables trading of a variety of synthetic assets based on spot cryptocurrencies, commodities, and thematic indexes with fast confirmation and finality.
+        img: ./img/home/product2.png
+        buttons:
+          - label: Learn more
+            title: Learn more
+            color: primary
+            to: https://buildr.linear.finance
+            external: true
+            newWindow: true
+      - tab: Bridge
+        logo: ./img/home/tabTittle3.png
+        tittle: Asset Transfer. Cross-Chain. Composability.
+        introduction: Our custom built Bridge functionality that allows composability of LINA tokens and synthetic assets across different blockchains.
+        img: ./img/home/product3.png
+        buttons:
+          - label: Learn more
+            title: Learn more
+            color: primary
+            to: https://buildr.linear.finance
+            external: true
+            newWindow: true
+      - tab: Vault
+        logo: ./img/home/tabTittle4.png
+        tittle: Custom Built. Yield Generating. Passive Income.
+        introduction: Stake ℓUSD-BUSD LP to passively and efficiently earn interest paid in LINA tokens.
+        img: ./img/home/product4.png
+        buttons:
+          - label: Learn more
+            title: Learn more
+            color: primary
+            to: https://buildr.linear.finance
+            external: true
+            newWindow: true
+      - tab: liquidator
+        logo: ./img/home/tabTittle5.png
+        tittle: Search. Liquidate. Earn.
+        introduction: Use ℓUSD to liquidate accounts below our P-Ratio threshold. Earn 10% in LINA token rewards.
+        img: ./img/home/product5.png
+        buttons:
+          - label: Learn more
+            title: Learn more
+            color: primary
+            to: https://buildr.linear.finance
+            external: true
+            newWindow: true
   sections:
     - logo: /img/products/logo-crypto-linear-buildr.svg
-      title: Stakez.Créez.Gagnez
-      text: Une application décentralisée pour le staking et la création de ℓUSD,
-        acceptant un mélange de jetons LINA et d'autres cryptomonnaies majeures.
-      visual: /img/visuals/linear_buildr-home.png
+      dateTittle: 01/03
+      title: Why Linear
+      text: Linear provides seamless access to a diverse range of synthetic assets and decentralized financial services.
+      visual: /img/visuals/home-section-logo1.png
       buttons:
-        - label: Lancer Buildr
-          title: Linear Finance Launch buildr App
+        - label: Launch Buildr
+          title: Launch Buildr
           color: primary
           to: https://buildr.linear.finance
           external: true
           newWindow: true
-        - label: En savoir plus
-          title: Linear Finance Buildr
-          color: secondary
-          to: /fr/buildr/
-          external: false
-          newWindow: false
     - logo: /img/products/logo-crypto-linear-exchange.svg
-      title: Dépensez.Investissez.Diversifiez
-      text: Linear.Exchange permet de trader une variété d'actifs liquides basés sur
-        des cryptomonnaies, des matières premières et des indices thématiques
-        avec un temps de confirmation quasi instantané et une finalité
-        immédiate.
-      visual: /img/visuals/linear_exchange-home.png
+      dateTittle: 02/03
+      title: We collaborate
+      text: The Linear governance model is set up with the following goals in mind
+      visual: /img/visuals/home-section-logo2.png
       buttons:
-        - label: Lancer Exchange
-          title: Linear Finance Launch Exchange App
+        - label: Linear DAO
+          title: Linear DAO
           color: primary
-          to: https://exchange.linear.finance
+          to: 'https://forum.linear.finance/'
           external: true
           newWindow: true
-        - label: En savoir plus
-          title: Linear Finance Exchange
-          color: secondary
-          to: /fr/exchange/
-          external: false
-          newWindow: false
     - logo: /img/products/logo-crypto-linear-swap.svg
-      title: Transferts cross-chain.Économies de Gas.Composabilité
-      text: Notre fonctionnalité d'échange personnalisée qui permet d'économiser les
-        frais de gas et de composer vos LINA entre différentes blockchains.
-      visual: /img/visuals/linear_swap-home.png
+      dateTittle: 03/03
+      title: We have a vision
+      text: The Linear team are builders first and foremost. We are focused on creating a De-Fi Ecosystem that caters for the needs of everyone
+      visual: /img/visuals/home-section-logo3.png
       buttons:
-        - label: Lancer Swap
-          title: Linear Finance Launch Swap App
+        - label: Linear Roadmap
+          title: Linear Roadmap
           color: primary
-          to: https://buildr.linear.finance
+          to: 'https://buildr.linear.finance'
           external: true
           newWindow: true
-        - label: En savoir plus
-          title: Linear Finance Swap
-          color: secondary
-          to: /fr/swap/
-          external: false
-          newWindow: false
   cta:
-    title: Créez du ℓUSD et commencez à trader dès maintenant !
-    subtitle: Stakez vos LINA, créez du ℓUSD, et utilisez vos ℓUSD pour trader sur
-      Linear.Exchange.
+    title: Build ℓUSD and start trading today!
+    subtitle: Stake LINA tokens, build ℓUSD, then use ℓUSD to trade on Linear.Exchange.
     button:
-      label: Lancer l'app
-      to: http://buildr.linear.finance/
+      label: Launch app
+      to: 'http://buildr.linear.finance/'
       external: true
       newWindow: true
   partners:
-    title: Heureux de travailler avec
+    title: Happy to work with
     logos:
-      - title: PieDAO
-        image: /img/partners/piedao_logo.png
       - title: NGC Ventures
-        image: /img/partners/ngc_logo.png
+        image: /img/partners/newHomePage/ngc_logo.png
       - title: "#HASHED"
-        image: /img/partners/hashed_logo.png
-      - title: Genesis Block
-        image: /img/partners/gbv_logo.png
+        image: /img/partners/newHomePage/hashed_logo.png
+      - title: GBV
+        image: /img/partners/newHomePage/gbv_logo.png
       - title: CMS
-        image: /img/partners/cms_logo.png
-      - title: Kenetic
-        image: /img/partners/kenetic_logo.png
+        image: /img/partners/newHomePage/cms_logo.png
+      - title: BLACk EDGE
+        image: /img/partners/newHomePage/blackedge_logo.png
       - title: Evernew Capital
-        image: /img/partners/evernewcapital_logo.png
+        image: /img/partners/newHomePage/evernewcapital_logo.png
       - title: DuckDao
-        image: /img/partners/duckdao_logo.png
-      - title: BlackEdge
-        image: /img/partners/blackedge_logo.png
-      - title: Moonrock Capital
-        image: /img/partners/moonrockcapital_logo.png
-      - title: Vendetta Capital
-        image: /img/partners/vendettacapital_logo.png
-      - title: Soul Capital
-        image: /img/partners/soulcapital_logo.png
-      - title: Band Protocol
-        image: /img/partners/band_logo.png
-      - title: Huobi Global
-        image: /img/partners/huobi_logo.png
+        image: /img/partners/newHomePage/duckdao_logo.png
+      - title: HoubiGlobal
+        image: /img/partners/newHomePage/huobi_logo.png
+      - title: Soulcapital
+        image: /img/partners/newHomePage/soulcapital_logo.png
+      - title: Vendettacapital
+        image: /img/partners/newHomePage/vendettacapital_logo.png
 ---

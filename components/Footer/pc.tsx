@@ -81,8 +81,8 @@ const PcFooter = () => {
                 </div>
             </section>
             <section className="container grid grid-cols-4">
-                {menus.map(menu => (
-                    <div key={menu?.label} className="">
+                {menus.map((menu, index) => (
+                    <div key={menu?.label + index} className="">
                         <span className="text-transparent-gray text-base text font-normal leading-6">
                             {menu.label}
                         </span>

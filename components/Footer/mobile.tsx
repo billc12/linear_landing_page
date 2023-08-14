@@ -80,8 +80,8 @@ const MFooter = () => {
                 </div>
             </section>
             <section className="container grid grid-cols-1 px-5 mt-36">
-                {menus.map(menu => (
-                    <div key={menu?.label} className="mt-8">
+                {menus.map((menu, index) => (
+                    <div key={menu?.label + index} className="mt-8">
                         <span className="text-transparent-gray text-base text font-normal leading-6">
                             {menu.label}
                         </span>
