@@ -39,7 +39,7 @@ const PcFooter = () => {
 
     return (
         <footer className="flex flex-col items-center text-white h-10">
-            <section className="container pt-28 pb-16">
+            <section data-aos="fade-up" className="container pt-28 pb-16">
                 <div className="search relative">
                     <Image
                         className="search-bg absolute top-0 right-0"

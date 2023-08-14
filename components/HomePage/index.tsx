@@ -1,6 +1,10 @@
 import Device from '../../components/Device';
-import PcHomePage from './pc';
-import MobileHomePage from './mobile';
+import dynamic from 'next/dynamic';
+const PcHomePage = dynamic(import('./pc'), { ssr: false });
+const MobileHomePage = dynamic(import('./mobile'), { ssr: false });
+
+// import PcHomePage from './pc';
+// import MobileHomePage from './mobile';
 
 const HomePage = ({
     banner,

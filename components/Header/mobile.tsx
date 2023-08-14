@@ -56,7 +56,7 @@ const MobileHeader = ({}) => {
     return (
         <>
             <nav className="z-50 w-screen py-6 fixed top-0">
-                <Container className="flex">
+                <Container className="flex px-5">
                     <Link href={language}>
                         <LogoGroup />
                     </Link>

@@ -1,7 +1,7 @@
 import Device from '../../components/Device';
-import dynamic from "next/dynamic";
-const PcHeader = dynamic(import("./pc"), { ssr: false });
-const MobileFooter = dynamic(import("./mobile"), { ssr: false });
+import dynamic from 'next/dynamic';
+const PcHeader = dynamic(import('./pc'), { ssr: false });
+const MobileFooter = dynamic(import('./mobile'), { ssr: false });
 
 const Footer = () => {
     return (

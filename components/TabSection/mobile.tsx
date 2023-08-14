@@ -1,201 +1,153 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import ReactModal from 'react-modal';
-import Link from 'next/link';
-import Container from '../container';
-import navigation from '../../data/navigation.json';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Vector1 from '../../images/icons/vector1.svg';
+import Vector2 from '../../images/icons/vector2.svg';
+import RrrowRight from '../../images/icons/arrow-right.svg';
 import clsx from 'clsx';
-import SouthKoreaFlag from '../../images/flags/south-korea.svg';
-import ChinaFlag from '../../images/flags/china.svg';
-import GlobalFlag from '../../images/flags/global.svg';
-import FrenchFlag from '../../images/flags/french.svg';
-import Menu from '../../images/nav/menu.svg';
-import LogoGroup from '../LogoGroup';
-import CloseIcon from '../../images/icons/close.svg';
-import ChevronDown from '../../images/icons/chevron-down.svg';
+import TabLogo1 from '../../images/tabLogo/tab-logo1.svg';
+import TabLogo2 from '../../images/tabLogo/tab-logo2.svg';
+import TabLogo3 from '../../images/tabLogo/tab-logo3.svg';
+import TabLogo4 from '../../images/tabLogo/tab-logo4.svg';
+import TabLogo5 from '../../images/tabLogo/tab-logo5.svg';
+import Link from 'next/link';
+import Image from 'next/image';
 
-const MobileTabSection = ({ sectionsTab }) => {
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
-    const [languageIsOpen, setLanguageIsOpen] = useState(false);
-    const [openMenu, setOpenMenu] = useState(false);
+const TabLogoHandle = index => {
+    switch (index) {
+        case 1:
+            return <TabLogo1 />;
+        case 2:
+            return <TabLogo2 />;
+        case 3:
+            return <TabLogo3 />;
+        case 4:
+            return <TabLogo4 />;
+        case 5:
+            return <TabLogo5 />;
+    }
+};
 
-    const router = useRouter();
-    const urlLanguagePart = (router.asPath.split('/') ?? [])[1];
-    const language = Object.keys(navigation).includes(urlLanguagePart)
-        ? urlLanguagePart
-        : 'en';
-
-    const headerTranslations = navigation[language];
-    const { items: menu } = headerTranslations || {};
-
-    const getLang = lang => {
-        switch (lang) {
-            case 'cn':
-                return { flag: ChinaFlag, label: '汉语' };
-            case 'kr':
-                return { flag: SouthKoreaFlag, label: '한국어' };
-            case 'fr':
-                return { flag: FrenchFlag, label: 'Français' };
-            default:
-                return { flag: GlobalFlag, label: 'English' };
-        }
-    };
-    const { flag: Flag, label: langLabel } = getLang(language);
-
-    const modalContentStyle = {
-        maxWidth: '100vw',
-        height: '100vh',
-        background:
-            'radial-gradient(72.90% 64.69% at 64.69% 50.00%, rgba(53, 85, 254, 0.50) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, rgba(26, 56, 248, 0.09) 0%, rgba(0, 0, 0, 0.00) 60.94%)',
-        backgroundColor: '#000',
-        zIndex: '999',
-        padding: '20px',
-        inset: '0'
-    };
+const PcTabSection = ({ sectionsTab }) => {
+    const [tabState, setTabState] = useState(0);
 
     return (
-        <>
-            <nav className="z-50 w-screen py-6 fixed top-0">
-                <Container className="flex">
-                    <Link href={language}>
-                        <LogoGroup />
-                    </Link>
-                    <div className="ml-11 w-full flex items-center flex-row-reverse">
-                        <ul className="flex justify-between items-center ">
-                            <li className="">
-                                <button
-                                    type="button"
-                                    className=""
-                                    onClick={() => setMenuIsOpen(true)}
-                                    title={langLabel}
-                                >
-                                    <Menu />
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </Container>
-            </nav>
-            <ReactModal
-                isOpen={menuIsOpen}
-                shouldCloseOnOverlayClick
-                onRequestClose={() => setMenuIsOpen(false)}
-                closeTimeoutMS={500}
-                preventScroll
-                ariaHideApp={false}
-                style={{
-                    content: modalContentStyle
-                }}
-            >
-                <div className="mobileModalContainer">
-                    <div className="mobileModalContainer-close">
-                        <CloseIcon
-                            onClick={() => {
-                                setMenuIsOpen(false);
-                            }}
-                        />
-                    </div>
+        <div
+            className={clsx(
+                'container',
+                'sectionTabContainer',
+                `sectionTabContainer-${tabState}`
+            )}
+        >
+            <div className="mSectionsTab">
+                <span className="mSectionsTab-tittle text-black text-4xl text-center">
+                    {sectionsTab?.tittle}
+                </span>
 
-                    <div className="mobileModalContainer-content">
-                        <LogoGroup
-                            variant="foot-logo"
-                            className="mobileModalContainer-content-logo"
-                        />
-
-                        <ul className="mobileModalContainer-content-list list-unstyled ">
-                            {menu?.map((item, index) => (
-                                <li
-                                    className={clsx(
-                                        'mobileModalContainer-content-list-item',
-                                        item?.type === 'normal'
-                                            ? 'listItemNormal'
-                                            : 'listItemSmall'
-                                    )}
-                                    key={item?.url + index}
-                                >
-                                    {item?.type === 'normal' ? (
-                                        <Link
-                                            href={item?.url}
-                                            title={item?.label}
-                                            onClick={() => setMenuIsOpen(false)}
-                                            className="nav-item text-4xl"
-                                        >
-                                            {item?.label}
-                                        </Link>
-                                    ) : (
-                                        <Link
-                                            href={item?.url}
-                                            title={item?.label}
-                                            onClick={() => setMenuIsOpen(false)}
-                                            className="nav-item  text-xl"
-                                        >
-                                            {item?.label}
-                                        </Link>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
-
-                        <div className="mobileModalContainer-content-language mt-8">
-                            <div
-                                onClick={() => {
-                                    setLanguageIsOpen(!languageIsOpen);
-                                }}
-                                className="mobileModalContainer-content-language-button"
+                <div className="mSectionsTab-tab">
+                    {sectionsTab?.items.map((item, index) => {
+                        return (
+                            <span
+                                key={item.tab + index}
+                                onClick={setTabState.bind(this, index)}
+                                className={clsx(
+                                    'mSectionsTab-tab-item',
+                                    `mSectionsTab-tab-item${
+                                        index === tabState ? '-active' : ''
+                                    }`,
+                                    'text-gray'
+                                )}
                             >
-                                <div className="mobileModalContainer-content-language-button-flag">
-                                    <Flag></Flag>
-                                </div>
-                                <div className="mobileModalContainer-content-language-button-langLabel">
-                                    {langLabel}
-                                </div>
-                                <div className="mobileModalContainer-content-language-button-chevronDown">
-                                    <ChevronDown
-                                        style={{
-                                            transform: languageIsOpen
-                                                ? null
-                                                : 'rotate(-90deg)'
-                                        }}
-                                    ></ChevronDown>
-                                </div>
-                            </div>
-                            {languageIsOpen && (
-                                <div className="mobileModalContainer-content-language-menu">
-                                    {Object.keys(navigation)?.map(
-                                        (lang, index) => {
-                                            const currentLang = getLang(lang);
-                                            const { flag: CountryFlag, label } =
-                                                currentLang;
-
-                                            return (
-                                                <Link
-                                                    key={index}
-                                                    href={`/${
-                                                        lang !== 'en'
-                                                            ? lang
-                                                            : ''
-                                                    }`}
-                                                    onClick={() => {
-                                                        setOpenMenu(false);
-                                                    }}
-                                                    className="mobileModalContainer-content-language-menu-item"
-                                                >
-                                                    <CountryFlag width={40} />
-                                                    <span className="ml-5">
-                                                        {label}
-                                                    </span>
-                                                </Link>
-                                            );
-                                        }
-                                    )}
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                                {item.tab}
+                                {index === tabState ? (
+                                    <Vector1 className="mSectionsTab-tab-item-svg"></Vector1>
+                                ) : (
+                                    <Vector2 className="mSectionsTab-tab-item-svg"></Vector2>
+                                )}
+                            </span>
+                        );
+                    })}
                 </div>
-            </ReactModal>
-        </>
+
+                {sectionsTab?.items.map(
+                    ({ tittle, introduction, buttons }, index) => {
+                        if (index === tabState) {
+                            return (
+                                <div
+                                    key={tittle + index}
+                                    className="mSectionsTab-content"
+                                >
+                                    <div className="mSectionsTab-content-left">
+                                        <div className="mSectionsTab-content-left-logo">
+                                            {TabLogoHandle(index + 1)}
+                                        </div>
+                                        <div className="mSectionsTab-content-left-tittle">
+                                            <span className="text-black text-4xl">
+                                                {tittle}
+                                            </span>
+                                        </div>
+                                        <div className="mSectionsTab-content-left-introduction">
+                                            <span className="text-black text-base">
+                                                {introduction}
+                                            </span>
+                                        </div>
+                                        <div className="mSectionsTab-content-left-buttons">
+                                            {(buttons ?? []).map(
+                                                (button, index) => {
+                                                    return (
+                                                        <Link
+                                                            key={
+                                                                button?.to +
+                                                                index
+                                                            }
+                                                            href={button?.to}
+                                                            title={
+                                                                button?.title
+                                                            }
+                                                            className={clsx(
+                                                                'btn',
+                                                                'btn-type2'
+                                                            )}
+                                                            target={
+                                                                button?.newWindow
+                                                                    ? '_blank'
+                                                                    : null
+                                                            }
+                                                            rel={
+                                                                button?.newWindow
+                                                                    ? 'noreferrer'
+                                                                    : null
+                                                            }
+                                                        >
+                                                            <span className="btn-label">
+                                                                {button?.label}
+                                                                <RrrowRight className="ml-3 inline" />
+                                                            </span>
+                                                        </Link>
+                                                    );
+                                                }
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="mSectionsTab-content-right">
+                                        <div className="mSectionsTab-content-right-mask"></div>
+                                        <div className="mSectionsTab-content-right-img">
+                                            <Image
+                                                alt=""
+                                                src={require(`../../images/home/product${
+                                                    index + 1
+                                                }.png`)}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        }
+                        return null;
+                    }
+                )}
+            </div>
+        </div>
     );
 };
 
-export default MobileTabSection;
+export default PcTabSection;

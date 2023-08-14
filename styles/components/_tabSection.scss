@@ -6,7 +6,6 @@
   overflow: hidden;
 
   &-0 {
-
     background: rgb(232, 190, 139);
 
     &::after {
@@ -61,8 +60,8 @@
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  padding: 113px 0 86px 0;
-  z-index: 999;
+  padding: 113px 26px 86px;
+  z-index: 49;
 
   @media (min-width: map-get($grid-breakpoints, "md")) {
     height: 100vh;
@@ -145,7 +144,7 @@
         margin-left: 108px;
       }
 
-      &-logo{
+      &-logo {
         margin-bottom: 20px;
 
         @media (min-width: map-get($grid-breakpoints, "md")) {
@@ -173,6 +172,109 @@
         max-width: 589px;
         padding: 0 46px;
       }
+
+      &-mask {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 182.27px;
+        height: 891.111px;
+        border-radius: 891.111px;
+        background: #253490;
+        filter: blur(125px);
+      }
+
+      &-img {
+        // width: 497px;
+        position: relative;
+        z-index: 999;
+      }
+    }
+  }
+}
+
+.mSectionsTab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 56px 20px 48px;
+  z-index: 49;
+
+  &-tab {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+
+    &-item {
+      min-width: 96px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+      gap: 4px;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0px 4px 28px 0px rgba(133, 146, 178, 0.25);
+      padding: 0 1px;
+      margin: 6px 6px;
+
+      &-svg {
+        margin-left: 2px;
+      }
+
+      &-active {
+        color: #5674fe !important;
+      }
+    }
+
+    &-item ~ &-item {
+      margin-left: 1px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 44px 0px rgba(133, 146, 178, 0.25);
+    margin-top: 44px;
+    height: 640px;
+
+    &-left {
+      display: flex;
+      height: 437;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 36px 20px;
+      // margin: 30px 64px 10px 10px;
+
+      &-logo {
+        margin-bottom: 20px;
+      }
+
+      &-introduction {
+        margin: 24px 0;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      height: 640px;
+      border-radius: 20px;
+      background: linear-gradient(0deg, #0e0c24 0%, #0e0c24 100%), #ebf1ff;
+      padding: 0 10px;
 
       &-mask {
         position: absolute;

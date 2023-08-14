@@ -168,23 +168,23 @@ home:
     title: Happy to work with
     logos:
       - title: NGC Ventures
-        image: /img/partners/newHomePage/ngc_logo.png
+        image: /assets/partners/ngc_logo.png
       - title: "#HASHED"
-        image: /img/partners/newHomePage/hashed_logo.png
+        image: /assets/partners/hashed_logo.png
       - title: GBV
-        image: /img/partners/newHomePage/gbv_logo.png
+        image: /assets/partners/gbv_logo.png
       - title: CMS
-        image: /img/partners/newHomePage/cms_logo.png
+        image: /assets/partners/cms_logo.png
       - title: BLACk EDGE
-        image: /img/partners/newHomePage/blackedge_logo.png
+        image: /assets/partners/blackedge_logo.png
       - title: Evernew Capital
-        image: /img/partners/newHomePage/evernewcapital_logo.png
+        image: /assets/partners/evernewcapital_logo.png
       - title: DuckDao
-        image: /img/partners/newHomePage/duckdao_logo.png
+        image: /assets/partners/duckdao_logo.png
       - title: HoubiGlobal
-        image: /img/partners/newHomePage/huobi_logo.png
+        image: /assets/partners/huobi_logo.png
       - title: Soulcapital
-        image: /img/partners/newHomePage/soulcapital_logo.png
+        image: /assets/partners/soulcapital_logo.png
       - title: Vendettacapital
-        image: /img/partners/newHomePage/vendettacapital_logo.png
+        image: /assets/partners/vendettacapital_logo.png
 ---

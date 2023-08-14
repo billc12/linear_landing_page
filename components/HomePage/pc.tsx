@@ -101,7 +101,10 @@ const PcHomePage = ({
                 >
                     <div className="grid grid-cols-2">
                         <div
-                            className={clsx(idx % 2 === 0 ? 'order-last' : '')}
+                            className={clsx(
+                                idx % 2 === 0 ? 'order-last' : '',
+                                'pl-20'
+                            )}
                         >
                             <div className="text-primary text-5xl font-extralight">
                                 {section?.dateTittle}
@@ -303,19 +306,6 @@ const PcHomePage = ({
                                         {item.tittle2}
                                     </div>
                                 </div>
-                                {/* <div
-                                    style={{
-                                        position: 'absolute',
-                                        top: '-80px',
-                                        left: '1vw',
-                                        zIndex: '-1'
-                                    }}
-                                >
-                                    <Image
-                                        alt=""
-                                        src={require(`../../images/visuals/home-section-logo4.png`)}
-                                    />
-                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -394,6 +384,74 @@ const PcHomePage = ({
                             </div>
                         );
                     })}
+                </div>
+            </div>
+
+            <div className="partners mb-48 mt-40">
+                <div>
+                    <div className=" text-5xl text-center">
+                        {partners?.title}
+                    </div>
+                </div>
+
+                <div
+                    style={{
+                        marginTop: '104px'
+                    }}
+                    data-aos="fade-down"
+                    className="partners-row"
+                >
+                    <div
+                        className="partners-row-item"
+                        style={{
+                            width: '100%',
+                            minWidth: 80,
+                            maxWidth: 145,
+                            margin: '0 60px'
+                        }}
+                    ></div>
+                    {(partners?.logos.slice(0, 5) ?? [])?.map((logo, index) => (
+                        <img
+                            key={index}
+                            src={logo?.image}
+                            alt={logo?.title}
+                            style={{
+                                width: '100%',
+                                minWidth: 80,
+                                maxWidth: 145,
+                                margin: '0 60px'
+                            }}
+                            className="partners-row-item"
+                        />
+                    ))}
+                    <div />
+                </div>
+                <div data-aos="fade-up" className="partners-row mt-12">
+                    {(partners?.logos.slice(5, 10) ?? [])?.map(
+                        (logo, index) => (
+                            <img
+                                key={index}
+                                src={logo?.image}
+                                alt={logo?.title}
+                                style={{
+                                    width: '100%',
+                                    minWidth: 80,
+                                    maxWidth: 145,
+                                    margin: '0 60px'
+                                }}
+                                className="partners-row-item"
+                            />
+                        )
+                    )}
+                    <div
+                        className="partners-row-item"
+                        style={{
+                            width: '100%',
+                            minWidth: 80,
+                            maxWidth: 145,
+                            margin: '0 60px'
+                        }}
+                    ></div>
                 </div>
             </div>
         </Container>

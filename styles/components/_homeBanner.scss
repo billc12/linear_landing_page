@@ -55,3 +55,28 @@
   //   transform: translateX(-50%);
   // }
 }
+
+.mHome-banner {
+  height: 100vh;
+  flex-shrink: 0;
+
+  &-text {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  &-logo {
+    overflow: hidden;
+    position: relative;
+    height: 360px;
+    margin-top: 104px;
+    width: 100%;
+  }
+
+  // .scroll-down-wrapper {
+  //   position: absolute;
+  //   bottom: 72px;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
+}

@@ -168,7 +168,7 @@ home:
     title: Happy to work with
     logos:
       - title: NGC Ventures
-        image: /img/partners/newHomePage/ngc_logo.png
+        image: ./partners/newHomePage/ngc_logo.png
       - title: "#HASHED"
         image: /img/partners/newHomePage/hashed_logo.png
       - title: GBV
