@@ -75,9 +75,9 @@
     margin-top: 24px;
     max-width: 100%;
 
-    @media (min-width: map-get($grid-breakpoints, "md")) {
-      max-width: 616px;
-    }
+    // @media (min-width: map-get($grid-breakpoints, "md")) {
+    //   max-width: 616px;
+    // }
 
     &-item {
       display: flex;
@@ -140,7 +140,7 @@
       margin: 30px 64px 10px 10px;
 
       @media (min-width: map-get($grid-breakpoints, "md")) {
-        width: 455px;
+        // width: 455px;
         margin-left: 108px;
       }
 
@@ -188,7 +188,7 @@
       &-img {
         // width: 497px;
         position: relative;
-        z-index: 999;
+        z-index: 56;
       }
     }
   }

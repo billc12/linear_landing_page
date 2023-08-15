@@ -10,7 +10,7 @@
   }
 
   &-content {
-    align-content: center;
+    align-content: space-between;
     margin: 0;
 
     &-card {
@@ -24,7 +24,7 @@
       border-radius: 16px;
       background: linear-gradient(0deg, rgba(126, 181, 255, 0.3) 0%, rgba(26, 56, 248, 0.3) 100%), #1b34d4;
       box-shadow: 0px 0px 32px 0px rgba(26, 56, 248, 0.8);
-      margin: 0 16px;
+      // margin: 0 16px;
       padding: 0 40 20px;
 
       @media (min-width: map-get($grid-breakpoints, "xl")) {

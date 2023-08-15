@@ -5,48 +5,47 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   height: 100vh;
   flex-shrink: 0;
 
-  @media (min-width: map-get($grid-breakpoints, "md")) {
-    height: 100vh;
-    min-height: 700px;
-  }
+  // @media (min-width: map-get($grid-breakpoints, "md")) {
+  //   height: 100vh;
+  //   min-height: 700px;
+  // }
 
   &-text {
     max-width: 100%;
-    margin-top: 16px;
 
     @media (min-width: map-get($grid-breakpoints, "md")) {
-      max-width: 695px;
+      max-width: 50%;
     }
   }
 
-  &-logo {
-    width: 592px;
-    height: 627px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    max-width: 592px;
-    border-radius: 50%;
+  // &-logo {
+  //   width: 592px;
+  //   height: 627px;
+  //   overflow: hidden;
+  //   position: relative;
+  //   width: 100%;
+  //   max-width: 592px;
+  //   border-radius: 50%;
 
-    video {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 100%;
-      pointer-events: none;
-      transform: translateY(-50%) scale(2);
+  //   video {
+  //     position: absolute;
+  //     left: 0;
+  //     top: 50%;
+  //     width: 100%;
+  //     pointer-events: none;
+  //     transform: translateY(-50%) scale(2);
 
-      // stylelint-disable
-      @media screen and (-webkit-min-device-pixel-ratio: 0) {
-        -webkit-filter: brightness(108.5%);
-      }
-      // stylelint-enable
-    }
-  }
+  //     // stylelint-disable
+  //     @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  //       -webkit-filter: brightness(108.5%);
+  //     }
+  //     // stylelint-enable
+  //   }
+  // }
 
   // .scroll-down-wrapper {
   //   position: absolute;

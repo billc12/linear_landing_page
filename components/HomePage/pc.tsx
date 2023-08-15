@@ -352,7 +352,7 @@ const PcHomePage = ({
                         );
                     })}
                 </div>
-                <div className="sectionsExtra2-content flex  items-center">
+                <div className="sectionsExtra2-content flex  items-center w-full justify-around">
                     {(sectionsExtra2?.items ?? []).map((item, index) => {
                         return (
                             <div
@@ -400,7 +400,7 @@ const PcHomePage = ({
                 </div>
             </div>
 
-            <div className="partners mb-48 mt-40">
+            <div className="partners overflow-y-auto mb-48 mt-40">
                 <div>
                     <div className=" text-5xl text-center">
                         {partners?.title}
@@ -412,7 +412,7 @@ const PcHomePage = ({
                         marginTop: '104px'
                     }}
                     data-aos="fade-down"
-                    className="partners-row"
+                    className="partners-row   flex"
                 >
                     <div
                         className="partners-row-item"

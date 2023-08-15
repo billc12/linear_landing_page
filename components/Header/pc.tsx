@@ -50,7 +50,8 @@ const PcHeader = ({}) => {
         backgroundColor: '#000',
         zIndex: '999',
         padding: '20px',
-        inset: '0'
+        inset: '0',
+        border:"none"
     };
 
     return (
