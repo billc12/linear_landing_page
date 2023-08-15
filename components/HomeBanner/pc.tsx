@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Link from 'next/link';
-import Image from 'next/image';
 import RrrowRight from '../../images/icons/arrow-right.svg';
 
 const PcHomeBanner = ({ heading, underline, buttons, subtitle }) => {
+
+
     return (
         <section className="container home-banner">
+
             <div className="home-banner-text">
                 <div
                     className="text-7xl font-extralight tracking-widest"
