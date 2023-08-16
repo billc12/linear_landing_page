@@ -177,7 +177,7 @@ const MFooter = () => {
             >
                 <div
                     onClick={() => setShowTelegramDialog(false)}
-                    className="absolute right-4 top-4"
+                    className="absolute right-6 top-6  cursor-pointer"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -195,28 +195,37 @@ const MFooter = () => {
                     </svg>
                 </div>
                 <div className="text-black">
-                    <span className="">Join our Telegram community!</span>
-                    <div className="">
+                    <span className="text-xl mt-8 mb-10 block">
+                        Join our Telegram community!
+                    </span>
+                    <div className="flex justify-center items-center">
                         <GlobalFlag
                             width={48}
                             height={32}
-                            className="shadow rounded"
+                            className="shadow rounded mr-4"
                         />
-                        <div>
-                            <span className="">{telegramDialog?.global}</span>
+                        <div className="flex flex-col">
+                            <span className="text-base">
+                                {telegramDialog?.global}
+                            </span>
                             <Link
                                 href="https://t.me/LinearExchangeCommunity"
-                                className="d-flex align-items-center"
+                                className="flex justify-center items-center"
                                 target="_blank"
                             >
-                                <span>{telegramDialog?.joinNow}</span>
+                                <span className="text-sm text-primary linkLine">
+                                    {telegramDialog?.joinNow}
+                                </span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 6 8"
                                     width="6"
                                     height="8"
-                                    className=""
+                                    className="ml-1"
+                                    style={{
+                                        marginTop: '2px'
+                                    }}
                                 >
                                     <path
                                         fill="#BABABA"
@@ -228,137 +237,161 @@ const MFooter = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="">
-                        <div className="">
-                            <div className="">
-                                <SouthKoreaFlag
-                                    width={48}
-                                    height={32}
-                                    className=""
-                                />
-                                <div>
-                                    <span>{telegramDialog?.southKorea}</span>
-                                    <Link
-                                        href="https://t.me/LinearFinance_Korea"
-                                        className=""
-                                        target="_blank"
+                    <div className="grid grid-cols-2 mt-8 mb-6 gap-x-4 gap-y-8">
+                        <div className="flex justify-center items-center">
+                            <SouthKoreaFlag
+                                width={48}
+                                height={32}
+                                className="shadow rounded mr-4"
+                            />
+                            <div className="flex flex-col">
+                                <span className="text-base">
+                                    {telegramDialog?.southKorea}
+                                </span>
+                                <Link
+                                    href="https://t.me/LinearFinance_Korea"
+                                    className="flex justify-center items-center"
+                                    target="_blank"
+                                >
+                                    <span className="text-sm text-primary linkLine">
+                                        {telegramDialog?.joinNow}
+                                    </span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 6 8"
+                                        width="6"
+                                        height="8"
+                                        className="ml-1"
+                                        style={{
+                                            marginTop: '2px'
+                                        }}
                                     >
-                                        <span>{telegramDialog?.joinNow}</span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 6 8"
-                                            width="6"
-                                            height="8"
-                                            className=""
-                                        >
-                                            <path
-                                                fill="#BABABA"
-                                                fillRule="evenodd"
-                                                d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="">
-                                <TurkeyFlag
-                                    width={48}
-                                    height={32}
-                                    className=""
-                                />
-                                <div>
-                                    <span>{telegramDialog?.turkey}</span>
-                                    <Link
-                                        href="https://t.me/linearfinanceturkey"
-                                        className=""
-                                        target="_blank"
-                                    >
-                                        <span>{telegramDialog?.joinNow}</span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 6 8"
-                                            width="6"
-                                            height="8"
-                                            className=""
-                                        >
-                                            <path
-                                                fill="#BABABA"
-                                                fillRule="evenodd"
-                                                d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                    </Link>
-                                </div>
+                                        <path
+                                            fill="#BABABA"
+                                            fillRule="evenodd"
+                                            d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </Link>
                             </div>
                         </div>
-                        <div className="">
-                            <div className="">
-                                <VietnamFlag
-                                    width={48}
-                                    height={32}
-                                    className=""
-                                />
-                                <div>
-                                    <span>{telegramDialog?.vietnam}</span>
-                                    <Link
-                                        href="https://t.me/linearfinancevietnam"
-                                        className="d-flex align-items-center"
-                                        target="_blank"
+                        <div className="flex justify-center items-center">
+                            <TurkeyFlag
+                                width={48}
+                                height={32}
+                                className="shadow rounded mr-4"
+                            />
+                            <div className="flex flex-col">
+                                <span className="text-base">
+                                    {telegramDialog?.turkey}
+                                </span>
+                                <Link
+                                    href="https://t.me/linearfinanceturkey"
+                                    className="flex justify-center items-center"
+                                    target="_blank"
+                                >
+                                    <span className="text-sm text-primary linkLine">
+                                        {telegramDialog?.joinNow}
+                                    </span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 6 8"
+                                        width="6"
+                                        height="8"
+                                        className="ml-1"
+                                        style={{
+                                            marginTop: '2px'
+                                        }}
                                     >
-                                        <span>{telegramDialog?.joinNow}</span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 6 8"
-                                            width="6"
-                                            height="8"
-                                            className=""
-                                        >
-                                            <path
-                                                fill="#BABABA"
-                                                fillRule="evenodd"
-                                                d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                    </Link>
-                                </div>
+                                        <path
+                                            fill="#BABABA"
+                                            fillRule="evenodd"
+                                            d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </Link>
                             </div>
-                            <div className="">
-                                <RussiaFlag
-                                    width={48}
-                                    height={32}
-                                    className=""
-                                />
-                                <div>
-                                    <span>{telegramDialog?.russia}</span>
-                                    <Link
-                                        href="https://t.me/linearfinancerussia"
-                                        className=""
-                                        target="_blank"
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <VietnamFlag
+                                width={48}
+                                height={32}
+                                className="shadow rounded mr-4"
+                            />
+                            <div className="flex flex-col">
+                                <span className="text-base">
+                                    {telegramDialog?.vietnam}
+                                </span>
+                                <Link
+                                    href="https://t.me/linearfinancevietnam"
+                                    className="flex justify-center items-center"
+                                    target="_blank"
+                                >
+                                    <span className="text-sm text-primary linkLine">
+                                        {telegramDialog?.joinNow}
+                                    </span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 6 8"
+                                        width="6"
+                                        height="8"
+                                        className="ml-1"
+                                        style={{
+                                            marginTop: '2px'
+                                        }}
                                     >
-                                        <span>{telegramDialog?.joinNow}</span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 6 8"
-                                            width="6"
-                                            height="8"
-                                            className=""
-                                        >
-                                            <path
-                                                fill="#BABABA"
-                                                fillRule="evenodd"
-                                                d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                    </Link>
-                                </div>
+                                        <path
+                                            fill="#BABABA"
+                                            fillRule="evenodd"
+                                            d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <RussiaFlag
+                                width={48}
+                                height={32}
+                                className="shadow rounded mr-4"
+                            />
+                            <div className="flex flex-col">
+                                <span className="text-base">
+                                    {telegramDialog?.russia}
+                                </span>
+                                <Link
+                                    href="https://t.me/linearfinancerussia"
+                                    className="flex justify-center items-center"
+                                    target="_blank"
+                                >
+                                    <span className="text-sm text-primary linkLine">
+                                        {telegramDialog?.joinNow}
+                                    </span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 6 8"
+                                        width="6"
+                                        height="8"
+                                        className="ml-1"
+                                        style={{
+                                            marginTop: '2px'
+                                        }}
+                                    >
+                                        <path
+                                            fill="#BABABA"
+                                            fillRule="evenodd"
+                                            d="M1.4.1a.5.5 0 00-.7.7L4.5 4 .7 7.1c-.2.2-.3.5-.1.7.2.2.5.3.7.1l4.2-3.6c.2-.2.2-.5 0-.7L1.4 0z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </Link>
                             </div>
                         </div>
                     </div>

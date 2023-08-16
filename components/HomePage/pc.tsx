@@ -8,7 +8,6 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import RrrowRight from '../../images/icons/arrow-right.svg';
 import TabSection from '../TabSection/index';
-const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const getSectionItem = lang => {
     switch (lang) {
@@ -84,22 +83,9 @@ const PcHomePage = ({
     const language = Object.keys(navigation).includes(urlLanguagePart)
         ? urlLanguagePart
         : 'en';
-    const cube = useRef();
-    const onLoad = spline => {
-        const obj = spline.findObjectByName('Scene');
-        cube.current = obj;
-    };
+
     return (
         <Container>
-            <Suspense fallback={<div></div>}>
-                <div className="cube">
-                    <Spline
-                        renderOnDemand={true}
-                        scene="/scene.splinecode"
-                        onLoad={onLoad}
-                    />
-                </div>
-            </Suspense>
             <HomeBanner
                 heading={banner?.heading}
                 subtitle={banner?.subtitle}

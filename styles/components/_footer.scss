@@ -262,3 +262,9 @@
   align-self: center;
   justify-content: space-between;
 }
+
+.linkLine {
+  &:hover {
+    text-decoration: underline;
+  }
+}

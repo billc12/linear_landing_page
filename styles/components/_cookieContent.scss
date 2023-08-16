@@ -1,0 +1,23 @@
+@import "../variables";
+
+.cookie-consent {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 30px);
+  max-width: 480px;
+  padding: 32px;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: 0 5px 15px rgba(#95a9b7, 0.2);
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    width: calc(100% - 64px);
+    margin: 32px;
+  }
+
+  .btn-label {
+    white-space: nowrap;
+  }
+}

@@ -124,7 +124,7 @@ const PcHomePage = ({
                                                     style={{
                                                         marginTop: '44px'
                                                     }}
-                                                    className="flex  items-center"
+                                                    className="flex items-center"
                                                     key={item?.describe + index}
                                                 >
                                                     <div

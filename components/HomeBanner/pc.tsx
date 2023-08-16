@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Link from 'next/link';
 import RrrowRight from '../../images/icons/arrow-right.svg';
+import Spline from '@splinetool/react-spline';
 
 const PcHomeBanner = ({ heading, underline, buttons, subtitle }) => {
-
-
     return (
         <section className="container home-banner">
-
             <div className="home-banner-text">
                 <div
                     className="text-7xl font-extralight tracking-widest"
@@ -52,9 +50,14 @@ const PcHomeBanner = ({ heading, underline, buttons, subtitle }) => {
                 </div>
             </div>
             <div className="home-banner-logo">
-                {/* <video autoPlay muted playsInline loop>
-          <source src={logoVideoMP4} type="video/mp4" />
-        </video> */}
+                <div className="home-banner-logo-content">
+                    <Spline
+                        style={{
+                            width: '1000px'
+                        }}
+                        scene="https://prod.spline.design/RgW4v8Eb9ioQmQgU/scene.splinecode"
+                    />
+                </div>
             </div>
         </section>
     );
