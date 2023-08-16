@@ -53,7 +53,7 @@ const PcHomeBanner = ({ heading, underline, buttons, subtitle }) => {
                 <div className="home-banner-logo-content">
                     <Spline
                         style={{
-                            width: '1000px'
+                          width: "100%"
                         }}
                         scene="https://prod.spline.design/RgW4v8Eb9ioQmQgU/scene.splinecode"
                     />
